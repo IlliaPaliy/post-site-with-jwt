@@ -1,8 +1,11 @@
 {%extends 'blog/layout.html'%}
 {%block content%}
 	{%for post in posts%}
-		{{post.title}}
-		{{post.author.username}}
-		{{post.content}}
+		<li>
+			{{post.title}}
+			{{post.author.username}}
+			{{post.content}}
+			{{post.date_posted}}
+		</li>
 	{%endfor%}	
 {%endblock%}
