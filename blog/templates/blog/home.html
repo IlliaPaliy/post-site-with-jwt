@@ -1,4 +1,8 @@
 {%extends 'blog/layout.html'%}
 {%block content%}
-home
+	{%for post in posts%}
+		{{post.title}}
+		{{post.author.username}}
+		{{post.content}}
+	{%endfor%}	
 {%endblock%}
